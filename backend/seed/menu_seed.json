@@ -1,0 +1,93 @@
+{
+    "categories": [
+        { "id": "coffee", "name": "Coffee", "sortOrder": 0 },
+        { "id": "matcha", "name": "Matcha", "sortOrder": 1 }
+    ],
+    "items": [
+        {
+            "id": "ceo-latte",
+            "categoryId": "coffee",
+            "name": "CEO Latte",
+            "description": "Smooth espresso with velvety steamed milk, topped with signature latte art.",
+            "basePrice": 11.9,
+            "imageUrl": "/assets/ceo-latte.png",
+            "sizes": [
+                { "id": "regular", "label": "Regular", "priceDelta": 0 },
+                { "id": "large", "label": "Large", "priceDelta": 1.5 }
+            ],
+            "addOns": [
+                { "id": "extra-shot", "label": "Extra Shot", "priceDelta": 1.5 },
+                { "id": "oat-milk", "label": "Oat Milk", "priceDelta": 2.0 }
+            ],
+            "available": true
+        },
+        {
+            "id": "buttercream-latte",
+            "categoryId": "coffee",
+            "name": "Buttercream Latte",
+            "description": "Iced espresso with milk and a rich, buttery caramel cream top layer.",
+            "basePrice": 12.9,
+            "imageUrl": "/assets/buttercream-latte.png",
+            "sizes": [
+                { "id": "regular", "label": "Regular", "priceDelta": 0 },
+                { "id": "large", "label": "Large", "priceDelta": 1.5 }
+            ],
+            "addOns": [
+                { "id": "extra-shot", "label": "Extra Shot", "priceDelta": 1.5 },
+                { "id": "less-ice", "label": "Less Ice", "priceDelta": 0 }
+            ],
+            "available": true
+        },
+        {
+            "id": "iced-spanish-latte",
+            "categoryId": "coffee",
+            "name": "Iced Spanish Latte",
+            "description": "Espresso with condensed milk and fresh milk over ice — bold and sweet.",
+            "basePrice": 11.5,
+            "imageUrl": "/assets/iced-spanish-latte.png",
+            "sizes": [
+                { "id": "regular", "label": "Regular", "priceDelta": 0 },
+                { "id": "large", "label": "Large", "priceDelta": 1.5 }
+            ],
+            "addOns": [
+                { "id": "extra-shot", "label": "Extra Shot", "priceDelta": 1.5 },
+                { "id": "less-ice", "label": "Less Ice", "priceDelta": 0 }
+            ],
+            "available": true
+        },
+        {
+            "id": "iced-melaka",
+            "categoryId": "coffee",
+            "name": "Iced Melaka",
+            "description": "Espresso layered with milk and gula melaka (palm sugar) for a caramelized local twist.",
+            "basePrice": 13.5,
+            "imageUrl": "/assets/iced-melaka.png",
+            "sizes": [
+                { "id": "regular", "label": "Regular", "priceDelta": 0 },
+                { "id": "large", "label": "Large", "priceDelta": 1.5 }
+            ],
+            "addOns": [
+                { "id": "extra-shot", "label": "Extra Shot", "priceDelta": 1.5 },
+                { "id": "extra-gula-melaka", "label": "Extra Gula Melaka", "priceDelta": 1.0 }
+            ],
+            "available": true
+        },
+        {
+            "id": "iced-matcha",
+            "categoryId": "matcha",
+            "name": "Iced Matcha",
+            "description": "Premium ceremonial-grade matcha whisked with milk, served over ice.",
+            "basePrice": 12.5,
+            "imageUrl": "/assets/iced-matcha.png",
+            "sizes": [
+                { "id": "regular", "label": "Regular", "priceDelta": 0 },
+                { "id": "large", "label": "Large", "priceDelta": 1.5 }
+            ],
+            "addOns": [
+                { "id": "extra-matcha", "label": "Extra Matcha Shot", "priceDelta": 1.5 },
+                { "id": "oat-milk", "label": "Oat Milk", "priceDelta": 2.0 }
+            ],
+            "available": true
+        }
+    ]
+}
