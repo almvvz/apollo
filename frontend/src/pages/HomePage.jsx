@@ -53,7 +53,17 @@ export default function HomePage() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-bold text-brand-navy mb-4">Menu</h1>
+      <section className="rounded-card bg-gradient-to-br from-brand-navy to-brand-navy-light text-brand-white px-8 py-10 mb-8 shadow-md">
+        <p className="text-sm uppercase tracking-[0.2em] text-brand-white/70 mb-2">Freshly brewed</p>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2">
+          {user ? `Hi ${user.displayName}, what's your pick today?` : 'Your daily cup, your way.'}
+        </h1>
+        <p className="text-brand-white/80 max-w-md">
+          Pick a drink, tweak the size and add-ons, and we'll have it ready for you.
+        </p>
+      </section>
+
+      <h2 className="text-xl font-bold text-brand-navy mb-4">Menu</h2>
 
       <div className="flex gap-2 mb-6 overflow-x-auto pb-1">
         <button

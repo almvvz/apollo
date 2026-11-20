@@ -34,8 +34,14 @@ export default function CustomizationModal({ item, onClose, onConfirm }) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black/40 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-card max-w-md w-full max-h-[90vh] overflow-y-auto flex flex-col gap-4">
+    <div
+      className="fixed inset-0 bg-brand-navy/40 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+      onClick={onClose}
+    >
+      <div
+        className="animate-pop-in bg-white rounded-card shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto flex flex-col gap-4"
+        onClick={(e) => e.stopPropagation()}
+      >
         {item.imageUrl && (
           <img
             src={item.imageUrl}
@@ -121,7 +127,7 @@ export default function CustomizationModal({ item, onClose, onConfirm }) {
           <button
             onClick={handleConfirm}
             disabled={submitting}
-            className="bg-brand-accent text-brand-white font-semibold rounded-full py-2.5 disabled:opacity-60"
+            className="bg-brand-accent text-brand-white font-semibold rounded-full py-3 shadow-md hover:brightness-110 transition disabled:opacity-60"
           >
             {submitting ? 'Adding…' : `Add to cart — RM ${total.toFixed(2)}`}
           </button>

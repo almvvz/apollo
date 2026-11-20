@@ -16,3 +16,38 @@ body {
   color: var(--color-brand-navy);
   font-family: var(--font-sans);
 }
+
+body {
+  background-color: #f6f8fc;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  input:not([type='checkbox']):not([type='radio']),
+  textarea,
+  select {
+    background-color: var(--color-brand-white);
+    transition: border-color 150ms, box-shadow 150ms;
+  }
+  input:not([type='checkbox']):not([type='radio']):focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: var(--color-brand-accent);
+    box-shadow: 0 0 0 3px rgb(47 111 237 / 0.18);
+  }
+  input[type='checkbox'] {
+    accent-color: var(--color-brand-accent);
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.animate-pop-in {
+  animation: pop-in 180ms ease-out;
+}

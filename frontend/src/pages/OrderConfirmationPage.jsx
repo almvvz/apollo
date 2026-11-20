@@ -19,7 +19,6 @@ export default function OrderConfirmationPage() {
 
   return (
     <div className="p-8 max-w-md mx-auto text-center">
-      <div className="text-5xl mb-4">✅</div>
       <h1 className="text-2xl font-bold text-brand-navy mb-2">Order placed!</h1>
       <p className="text-brand-navy/70 mb-6">
         Order #{order.id.slice(0, 8)} — total RM {order.total.toFixed(2)}

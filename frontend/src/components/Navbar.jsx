@@ -13,8 +13,8 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-brand-navy text-brand-white px-6 py-4 flex items-center justify-between">
-      <Link to="/" className="text-xl font-bold tracking-wide">
+    <nav className="sticky top-0 z-40 bg-brand-navy/95 backdrop-blur text-brand-white px-6 py-4 flex items-center justify-between shadow-md">
+      <Link to="/" className="text-xl font-bold tracking-[0.2em]">
         APOLLO
       </Link>
       <div className="flex items-center gap-5 text-sm font-medium">
