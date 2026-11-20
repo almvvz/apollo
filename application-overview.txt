@@ -1,0 +1,76 @@
+APOLLO WEB APP: APPLICATION OVERVIEW
+
+Note: This overview was worked out from the source code. The app was not run,
+so none of the behaviour below has been tested yet.
+
+
+PURPOSE
+
+Apollo is a coffee-ordering web app, built as a learning project and styled
+after ZUS Coffee. Customers can browse a drinks menu, customize drinks, add them
+to a cart, place an order and view their order history. Prices are in Malaysian
+ringgit (RM). There is no real payment step, and all data is held in memory.
+
+
+MAIN FEATURES
+
+- Sign-up: requires an email, a display name and a password of at least 8
+  characters. Duplicate emails are rejected.
+- Login and logout: a successful login returns a session token, which the
+  browser stores and sends with each request. Logout ends the session on the
+  server.
+- Access control: anyone can view the menu, but the cart, checkout, confirmation
+  and profile pages need a login. Users can only see their own orders.
+- Menu browsing: 5 drinks in 2 categories (Coffee and Matcha), with a category
+  filter. Base prices run from RM 11.50 to RM 13.50.
+- Drink customization: choose a size (Regular or Large), add-ons such as Extra
+  Shot or Oat Milk, and a quantity, with a live price total.
+- Cart: change quantities, remove items and see the subtotal. The server
+  validates selections and calculates the prices.
+- Checkout: shows an order summary and places the order with one click. The
+  server adds 6% tax, saves the order and empties the cart. An empty cart is
+  rejected.
+- Order confirmation and history: a confirmation page shows the order number and
+  total. The profile page lists past orders, newest first, and each one opens to
+  show items, subtotal, tax and total.
+
+
+TECH STACK
+
+Frontend:          React 19, React Router 7, JavaScript (JSX), Context API for
+                   login and cart state
+Styling:           Tailwind CSS 4
+Frontend tooling:  Vite 8, oxlint, npm
+Backend:           C++20, Drogon web framework, REST API with JSON
+Security:          OpenSSL, PBKDF2-HMAC-SHA256 salted password hashing, Bearer
+                   tokens
+Data storage:      No database: in-memory stores, with the menu loaded from
+                   backend/seed/menu_seed.json at startup
+Backend build:     CMake
+
+
+POSSIBLE RECOMMENDATIONS
+
+These come from reading the code, so confirm each one by testing before
+reporting it.
+
+1. Show tax and the final total at checkout. The page currently shows only the
+   subtotal, so the customer first sees the higher total after ordering.
+2. Add a database, because restarting the backend erases all accounts, carts and
+   orders.
+3. Add automated tests, since the repository has none.
+4. Make sessions expire and limit login attempts. Tokens currently last until
+   logout or a restart, and failed logins are not limited.
+5. Treat emails as case-insensitive, because A@x.com and a@x.com can currently
+   be two separate accounts.
+6. Set a maximum quantity, and store money as whole sen instead of
+   floating-point numbers.
+7. Restrict cross-origin access (CORS), which currently allows any website.
+8. Add a real payment step before the app is used beyond a demo.
+
+
+NOTE ON SCREENSHOTS
+
+If the report includes screenshots, note that the product photos show ZUS's
+logo, so the lecturer may expect a line saying the app is not affiliated with
+ZUS.
